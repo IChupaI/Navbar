@@ -1,10 +1,10 @@
-export type dataType = {
+export type LinkData = {
   id: string;
   title: string;
   description: string;
 };
 
-export const dat = [
+export const linkData = [
   {
     id: 'programm',
     title: 'Программа',
