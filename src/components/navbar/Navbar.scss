@@ -53,7 +53,11 @@ nav {
   }
 }
 
-  @media screen and (max-width: 768px){
+
+
+
+
+  @media screen and (max-width: 768px) {
     nav {
       display: block;
 
@@ -71,7 +75,8 @@ nav {
       background: #0f172af3;
       width: 100%;
       justify-content: center;
-
+      visibility: hidden;
+      opacity: 0;
       .item {
         width: 100%;
         text-align: right;
@@ -83,6 +88,10 @@ nav {
           border-top: 1px solid rgba(255, 255, 255, 0.555);
           margin-top: var(--navbar-height);
         }
+      }
+      &__open {
+        visibility: initial;
+        opacity: 1;
       }
     }
 

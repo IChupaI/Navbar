@@ -1,17 +1,17 @@
 import React from 'react';
-import { dataType } from '../../data/data';
+import { LinkData } from '../../data/data';
 
-type SectionsProps = {
-  data: dataType[];
+type Props = {
+  links: LinkData[];
 };
 
-const Sections: React.FC<SectionsProps> = ({ data }: SectionsProps) => {
+const Sections = ({ links }: Props) => {
   return (
     <div className="sections">
-      {data.map((d) => (
-        <div className="section" key={d.id} style={{ height: '70vh' }} id={d.id}>
-          <h2>{d.title}</h2>
-          <p>{d.description}</p>
+      {links.map((link) => (
+        <div className="section" key={link.id} style={{ height: '70vh' }} id={link.id}>
+          <h2>{link.title}</h2>
+          <p>{link.description}</p>
         </div>
       ))}
     </div>
@@ -19,3 +19,5 @@ const Sections: React.FC<SectionsProps> = ({ data }: SectionsProps) => {
 };
 
 export default Sections;
+
+
